@@ -1,0 +1,21 @@
+spring:
+  sql:
+    init:
+      mode: always
+  datasource:
+    hikari:
+      password: omonov2006
+      username: postgres
+    url: jdbc:postgresql://localhost:5432/yagu
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+sms:
+  email: !
+  password: !
