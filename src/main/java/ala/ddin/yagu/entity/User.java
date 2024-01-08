@@ -24,18 +24,15 @@ public class User extends AbsLongEntity implements UserDetails {
     @Column(nullable = false, unique = true)
     private String phoneNumber;
     private Integer smsCode;
-    private Long balance;
     private String location;
     @Enumerated(EnumType.STRING)
     private Role role;
     @OneToOne
     private Status status;
-    @Column(length = 6)
-    private Long cardNumber;
-    private Integer licNum;
     @OneToOne
     private Car car;
     private Boolean isEnabled;
+    private Boolean isConfirmed;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

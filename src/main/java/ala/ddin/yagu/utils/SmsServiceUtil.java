@@ -17,10 +17,6 @@ import java.net.URL;
 
 @EnableScheduling
 public class SmsServiceUtil {
-    @Value("${sms.email}")
-    private static String email;
-    @Value("${sms.password}")
-    private static String password;
     private static String token;
 
     public static void setToken() {
@@ -57,7 +53,7 @@ public class SmsServiceUtil {
             con.setDoOutput(true);
 
             OutputStream os = con.getOutputStream();
-            os.write(("email=" + email + "&password=" + password).getBytes());
+            os.write(("email=qambarovoloviddin@gmail.com&password=bDXKnKrojevYTp0ldIunwkIPq6kktYrGBAXKpiKG").getBytes());
             os.flush();
             os.close();
 

@@ -23,7 +23,7 @@ public class DataLoaderConfig implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         if (Objects.equals(sqlInitMode, "always")) {
-            userRepository.save(User.builder().name("YaGu").surname("YaGu").phoneNumber("+99895096053").role(Role.ROLE_ADMIN).isEnabled(true).cardNumber(123456L).balance(0L).build());
+            userRepository.save(User.builder().name("YaGu").isConfirmed(true).surname("YaGu").phoneNumber("+99895096053").role(Role.ROLE_ADMIN).isEnabled(true).build());
             System.out.println("Admin Saved");
         }
     }
